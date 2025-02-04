@@ -61,7 +61,11 @@
   </ItemGroup>
   <ItemGroup>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     <Compile Include="Assets\Scripts\manualEscape.cs" />
+=======
+    <Compile Include="Assets\Scripts\GhostScatter.cs" />
+>>>>>>> Stashed changes
 =======
     <Compile Include="Assets\Scripts\GhostScatter.cs" />
 >>>>>>> Stashed changes
@@ -73,6 +77,7 @@
     <Compile Include="Assets\Scripts\GhostEves.cs" />
     <Compile Include="Assets\Scripts\Node.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
     <Compile Include="Assets\Scripts\fullScreen.cs" />
     <Compile Include="Assets\Scripts\AnimatedSprite.cs" />
@@ -101,6 +106,14 @@
     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
+=======
+    <Compile Include="Assets\Scripts\GhostFrightened.cs" />
+    <Compile Include="Assets\Scripts\GhostHome.cs" />
+    <Compile Include="Assets\Scripts\PowerPellet.cs" />
+    <Compile Include="Assets\Scripts\AnimatedSprite.cs" />
+    <Compile Include="Assets\Scripts\Pellet.cs" />
+    <Compile Include="Assets\Scripts\GhostChase.cs" />
+>>>>>>> Stashed changes
 =======
     <Compile Include="Assets\Scripts\GhostFrightened.cs" />
     <Compile Include="Assets\Scripts\GhostHome.cs" />
