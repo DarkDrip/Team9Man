@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get; private set; }
 
     [SerializeField] private Ghost[] ghosts;
-    [SerializeField] private Pacman pacman;
+    [SerializeField] private PacMan pacman;
     [SerializeField] private Transform pellets;
     public int score { get; private set; } = 0;
     public int lives { get; private set; } = 3;
