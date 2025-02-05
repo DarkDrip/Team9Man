@@ -56,7 +56,7 @@ public class Ghost : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.layer == LayerMask.NameToLayer("Pacm-Man"))
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Pac-Man"))
         {
             if (frightened.enabled)
             {

@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class GhostChase : GhostBehavior
 {
+    
     private void OnDisable()
     {
         ghost.scatter.Enable();
@@ -20,9 +21,10 @@ public class GhostChase : GhostBehavior
             Vector2 direction = Vector2.zero;
             float minDistance = float.MaxValue;
 
-            // Find the available direction that moves closet to pacman
+            // Find the available direction that moves closest to pacman
             foreach (Vector2 availableDirection in node.availableDirections)
             {
+                Debug.Log("I am in chase");
                 // If the distance in this direction is less than the current
                 // min distance then this direction becomes the new closest
                 Vector3 newPosition = transform.position + new Vector3(availableDirection.x, availableDirection.y);

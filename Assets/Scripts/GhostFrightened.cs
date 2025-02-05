@@ -75,6 +75,7 @@ public class GhostFrightened : GhostBehavior
 
         if (node != null && enabled)
         {
+            Debug.Log("I am in frightened");
             Vector2 direction = Vector2.zero;
             float maxDistance = float.MinValue;
 
@@ -99,7 +100,7 @@ public class GhostFrightened : GhostBehavior
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.layer == LayerMask.NameToLayer("Pacman"))
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Pac-Man"))
         {
             if (enabled)
             {
