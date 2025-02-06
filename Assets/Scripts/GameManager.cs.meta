@@ -3,7 +3,16 @@ guid: c9da53a5f68d2864a9d5d6ff83a23e4f
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - scoreText: {instanceID: 0}
+  - pacman: {instanceID: 0}
+  - pellets: {instanceID: 0}
+  - pacSource: {fileID: 1699185373721802381, guid: 85963972f838bff49a218baee8990e75, type: 3}
+  - audioSource: {fileID: 9197107610893335901, guid: 85963972f838bff49a218baee8990e75, type: 3}
+  - intro: {fileID: 8300000, guid: 6d45a9d1d55c2954a8793a0a26d48605, type: 3}
+  - eat: {fileID: 8300000, guid: 608997594d79d494d9cd75f95d4efef7, type: 3}
+  - death: {fileID: 8300000, guid: 02ea92e05e09e2b42b8c18c66861d544, type: 3}
+  - powerPellet: {fileID: 8300000, guid: a0510cb30d7492243bccd4dda26977fc, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

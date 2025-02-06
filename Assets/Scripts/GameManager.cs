@@ -8,19 +8,30 @@ using Unity.VisualScripting;
 
 public class GameManager : MonoBehaviour
 {
-    public TextMeshProUGUI scoreText = scoreText;
-    public TextMeshProUGUI livesText = livesText;
+    public TextMeshProUGUI scoreText;
+    //public TextMeshProUGUI livesText = livesText;
     public int roundCounter = 1;
 
-    
+
+
 
     public static GameManager Instance { get; private set; }
 
     [SerializeField] private Ghost[] ghosts;
     [SerializeField] private PacMan pacman;
     [SerializeField] private Transform pellets;
-    
-    
+
+    public AudioSource audioSource;
+    public AudioSource intro;
+    public AudioSource eat;
+    public AudioSource death;
+    public AudioSource powerPellet;
+    public AudioSource ghostEat;
+    public AudioSource idleWobble;
+
+
+
+
     public int score { get; private set; } = 0;
     public int lives { get; private set; } = 3;
 
@@ -57,6 +68,21 @@ public class GameManager : MonoBehaviour
         {
             NewGame();
         }
+
+        if (!idleWobble.isPlaying)
+        {
+            idleWobble.Play();
+        }
+
+        if (powerPellet.isPlaying || intro.isPlaying)
+        {
+            idleWobble.Pause();
+        }
+
+        if (!powerPellet.isPlaying && !intro.isPlaying)
+        {
+            idleWobble.Play();
+        }
     }
 
     private void NewGame()
@@ -80,6 +106,8 @@ public class GameManager : MonoBehaviour
 
     private void ResetState()
     {
+      
+        
         for (int i = 0; i < ghosts.Length; i++)
         {
             ghosts[i].ResetState();
@@ -117,6 +145,12 @@ public class GameManager : MonoBehaviour
     {
         pacman.DeathSequence();
 
+        if (!death.isPlaying)
+        {
+            death.Play();
+        }
+        
+
         SetLives(lives - 1);
 
         if (lives > 0)
@@ -131,6 +165,11 @@ public class GameManager : MonoBehaviour
 
     public void GhostEaten(Ghost ghost)
     {
+        if (!ghostEat.isPlaying)
+        {
+            ghostEat.Play();
+        }
+
         int points = ghost.points * ghostMultiplier;
         SetScore(score + points);
         
@@ -139,10 +178,18 @@ public class GameManager : MonoBehaviour
 
     public void PelletEaten(Pellet pellet)
     {
+        if (!eat.isPlaying)
+        {
+            eat.Play();
+        }
+
+
         pellet.gameObject.SetActive(false);
 
         SetScore(score + pellet.points);
         scoreText.text = "Score: " + score;
+
+        
 
         if (!HasRemainingPellets())
         {
@@ -154,6 +201,9 @@ public class GameManager : MonoBehaviour
 
     public void PowerPelletEaten(PowerPellet pellet)
     {
+
+        powerPellet.Play();
+
         for (int i = 0; i < ghosts.Length; i++)
         {
             ghosts[i].frightened.Enable(pellet.duration);

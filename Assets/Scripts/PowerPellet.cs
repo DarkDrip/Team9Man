@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PowerPellet : Pellet
 {
-    public float duration = 8f;
+    public float duration = 12f;
 
     protected override void Eat()
     {
