@@ -1,17 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 using TMPro;
-using Unity.VisualScripting;
 
 public class GameManager : MonoBehaviour
 {
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI livesText;
     public int roundCounter = 0;
-
+    
    
 
     public static GameManager Instance { get; private set; }
@@ -58,6 +54,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        pacman.ResetState();
         NewGame();
         scoreText.text = "Score: ";
         livesText.text = "Lives: 3";
@@ -84,7 +81,7 @@ public class GameManager : MonoBehaviour
     private void NewRound()
     {
         
-
+        
         foreach (Transform pellet in pellets)
         {
             pellet.gameObject.SetActive(true);
@@ -99,6 +96,7 @@ public class GameManager : MonoBehaviour
 
     private void ResetState()
     {
+        
         for (int i = 0; i < ghosts.Length; i++)
         {
             ghosts[i].ResetState();

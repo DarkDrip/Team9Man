@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class GhostHome : GhostBehavior
@@ -63,7 +62,7 @@ public class GhostHome : GhostBehavior
         }
         //Debug.Log("I am leaving home");
         // Pick a random direction left or right and re-enable movement
-        ghost.movement.SetDirection(new Vector2(Random.value < 0.5f ? -1f : 1f, 0f), true);
+        ghost.movement.SetDirection(Vector2.left, true);
         ghost.movement.rb.isKinematic = false;
         ghost.movement.enabled = true;
     }

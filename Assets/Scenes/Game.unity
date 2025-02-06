@@ -351,7 +351,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 48
+  m_fontSize: 41.1
   m_fontSizeBase: 72
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3786,6 +3786,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pacman
       objectReference: {fileID: 0}
+    - target: {fileID: 1699185373721802381, guid: 85963972f838bff49a218baee8990e75, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3147677541766328079, guid: 85963972f838bff49a218baee8990e75, type: 3}
       propertyPath: m_Radius
       value: 0.8
@@ -3793,6 +3797,22 @@ PrefabInstance:
     - target: {fileID: 3147677541766328079, guid: 85963972f838bff49a218baee8990e75, type: 3}
       propertyPath: m_Offset.y
       value: 0.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 5225185412701245361, guid: 85963972f838bff49a218baee8990e75, type: 3}
+      propertyPath: m_Size.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5225185412701245361, guid: 85963972f838bff49a218baee8990e75, type: 3}
+      propertyPath: m_Size.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5225185412701245361, guid: 85963972f838bff49a218baee8990e75, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1076354824, guid: 2e268fcd3729a7243a7765e619cc9809, type: 3}
+    - target: {fileID: 5225185412701245361, guid: 85963972f838bff49a218baee8990e75, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5618109708207764814, guid: 85963972f838bff49a218baee8990e75, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3812,15 +3832,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5618109708207764814, guid: 85963972f838bff49a218baee8990e75, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5618109708207764814, guid: 85963972f838bff49a218baee8990e75, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5618109708207764814, guid: 85963972f838bff49a218baee8990e75, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5618109708207764814, guid: 85963972f838bff49a218baee8990e75, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
