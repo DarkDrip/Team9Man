@@ -23,7 +23,7 @@ public class GhostHome : GhostBehavior
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("I am home");
+        //Debug.Log("I am home");
         // Reverse direction everytime the ghost hits a wall to create the
         // effect of the ghost bouncing around the home
         if (enabled && collision.gameObject.layer == LayerMask.NameToLayer("Obstacles"))
@@ -61,10 +61,11 @@ public class GhostHome : GhostBehavior
             elapsed += Time.deltaTime;
             yield return null;
         }
-        Debug.Log("I am leaving home");
+        //Debug.Log("I am leaving home");
         // Pick a random direction left or right and re-enable movement
         ghost.movement.SetDirection(new Vector2(Random.value < 0.5f ? -1f : 1f, 0f), true);
         ghost.movement.rb.isKinematic = false;
         ghost.movement.enabled = true;
     }
+    
 }

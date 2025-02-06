@@ -1,15 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using TMPro;
+using Unity.VisualScripting;
 
 public class GameManager : MonoBehaviour
 {
+    public TextMeshProUGUI scoreText = scoreText;
+    public TextMeshProUGUI livesText = livesText;
+    public int roundCounter = 1;
+
+    
 
     public static GameManager Instance { get; private set; }
 
     [SerializeField] private Ghost[] ghosts;
     [SerializeField] private PacMan pacman;
     [SerializeField] private Transform pellets;
+    
+    
     public int score { get; private set; } = 0;
     public int lives { get; private set; } = 3;
 
@@ -87,6 +98,7 @@ public class GameManager : MonoBehaviour
         }
 
         pacman.gameObject.SetActive(false);
+        SceneManager.LoadScene("GameOver");
     }
 
     private void SetLives(int lives)
@@ -98,7 +110,7 @@ public class GameManager : MonoBehaviour
     private void SetScore(int score)
     {
         this.score = score;
-        
+        scoreText.text = "Score: " + score;
     }
 
     public void PacmanEaten()
@@ -121,7 +133,7 @@ public class GameManager : MonoBehaviour
     {
         int points = ghost.points * ghostMultiplier;
         SetScore(score + points);
-
+        
         ghostMultiplier++;
     }
 
@@ -130,10 +142,12 @@ public class GameManager : MonoBehaviour
         pellet.gameObject.SetActive(false);
 
         SetScore(score + pellet.points);
+        scoreText.text = "Score: " + score;
 
         if (!HasRemainingPellets())
         {
             pacman.gameObject.SetActive(false);
+            roundCounter++;
             Invoke(nameof(NewRound), 3f);
         }
     }

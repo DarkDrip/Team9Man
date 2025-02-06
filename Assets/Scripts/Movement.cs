@@ -76,5 +76,4 @@ public class Movement : MonoBehaviour
         return hit.collider != null;
     }
 
-
 }
