@@ -10,9 +10,9 @@ public class GameManager : MonoBehaviour
 {
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI livesText;
-    public int roundCounter = 1;
+    public int roundCounter = 0;
 
-    
+   
 
     public static GameManager Instance { get; private set; }
 
@@ -25,7 +25,17 @@ public class GameManager : MonoBehaviour
     public int lives { get; private set; } = 3;
 
     private int ghostMultiplier = 1;
-
+    
+    /*
+    public GameManager scoreTextInit(TextMeshProUGUI scoreText)
+    {
+        this.scoreText = scoreText;
+    }
+    public GameManager livesTextInit(TextMeshProUGUI scoreText)
+    {
+        this.livesText = livesText;
+    }
+    */
     private void Awake()
     {
         if (Instance != null)
@@ -49,6 +59,8 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         NewGame();
+        scoreText.text = "Score: ";
+        livesText.text = "Lives: 3";
     }
 
     private void Update()
@@ -56,13 +68,16 @@ public class GameManager : MonoBehaviour
         if (lives <= 0 && Input.anyKeyDown)
         {
             NewGame();
+            
         }
     }
 
     private void NewGame()
     {
         SetScore(0);
+        scoreText.text = "Score: " + score;
         SetLives(3);
+        
         NewRound();
     }
 
@@ -74,7 +89,11 @@ public class GameManager : MonoBehaviour
         {
             pellet.gameObject.SetActive(true);
         }
-
+        roundCounter++;
+        if(roundCounter >= 2)
+        {
+            SceneManager.LoadScene("YouWin");
+        }    
         ResetState();
     }
 
@@ -104,7 +123,7 @@ public class GameManager : MonoBehaviour
     private void SetLives(int lives)
     {
         this.lives = lives;
-        
+        livesText.text = "Lives: " + lives;
     }
 
     private void SetScore(int score)

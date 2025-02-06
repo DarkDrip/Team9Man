@@ -12,8 +12,8 @@ public class gatorCode : MonoBehaviour
     void Start()
     {
 
-        img.enabled = true;
-        isImgOn = true;
+        img.enabled = false;
+        isImgOn = false;
     }
 
     void Update()
