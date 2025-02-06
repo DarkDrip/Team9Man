@@ -8,8 +8,8 @@ using Unity.VisualScripting;
 
 public class GameManager : MonoBehaviour
 {
-    public TextMeshProUGUI scoreText = scoreText;
-    public TextMeshProUGUI livesText = livesText;
+    public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI livesText;
     public int roundCounter = 1;
 
     

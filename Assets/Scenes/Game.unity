@@ -133,6 +133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc117d916b9d67d49903f37010c0ba5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< Updated upstream
 --- !u!1 &109712378
 GameObject:
   m_ObjectHideFlags: 0
@@ -406,6 +407,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5618109708207764814, guid: 85963972f838bff49a218baee8990e75, type: 3}
   m_PrefabInstance: {fileID: 1833385902}
   m_PrefabAsset: {fileID: 0}
+=======
+>>>>>>> Stashed changes
 --- !u!114 &504556495 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 527668575655963307, guid: 50e74e0f69705504eb00dc5f4d99caa5, type: 3}
@@ -1897,7 +1900,6 @@ Transform:
   - {fileID: 1879834709}
   - {fileID: 1820782480}
   - {fileID: 1626242919}
-  - {fileID: 427300209}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1784495755
@@ -4014,18 +4016,30 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &1823149173 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3029317224491510195, guid: 85963972f838bff49a218baee8990e75, type: 3}
+  m_PrefabInstance: {fileID: 1833385902}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f14087fd76e76de4289a5f57b34a185e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1833385902
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1777353897}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1699185373721802381, guid: 85963972f838bff49a218baee8990e75, type: 3}
       propertyPath: m_Name
       value: Pacman
       objectReference: {fileID: 0}
+<<<<<<< Updated upstream
     - target: {fileID: 3147677541766328079, guid: 85963972f838bff49a218baee8990e75, type: 3}
       propertyPath: m_Radius
       value: 0.8
@@ -4033,6 +4047,11 @@ PrefabInstance:
     - target: {fileID: 3147677541766328079, guid: 85963972f838bff49a218baee8990e75, type: 3}
       propertyPath: m_Offset.y
       value: 0.06
+=======
+    - target: {fileID: 3156203015124524014, guid: 85963972f838bff49a218baee8990e75, type: 3}
+      propertyPath: obstacleLayer.m_Bits
+      value: 256
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 5618109708207764814, guid: 85963972f838bff49a218baee8990e75, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4052,15 +4071,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5618109708207764814, guid: 85963972f838bff49a218baee8990e75, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5618109708207764814, guid: 85963972f838bff49a218baee8990e75, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5618109708207764814, guid: 85963972f838bff49a218baee8990e75, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5618109708207764814, guid: 85963972f838bff49a218baee8990e75, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -4116,7 +4135,11 @@ MonoBehaviour:
   - {fileID: 1114548323}
   - {fileID: 504556495}
   - {fileID: 1004347201}
+<<<<<<< Updated upstream
   pacman: {fileID: 1979002883}
+=======
+  pacman: {fileID: 1823149173}
+>>>>>>> Stashed changes
   pellets: {fileID: 1820782480}
 --- !u!4 &1857658465
 Transform:
@@ -6644,7 +6667,7 @@ CompositeCollider2D:
   m_GameObject: {fileID: 1879834708}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: ee2174d5bbd6707448161a15df75459b, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -6933,6 +6956,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 519420032}
   - {fileID: 1857658465}
+  - {fileID: 1833385902}
   - {fileID: 1777353897}
   - {fileID: 682602541}
   - {fileID: 562122007}
