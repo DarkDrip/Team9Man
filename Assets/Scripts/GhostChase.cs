@@ -24,7 +24,7 @@ public class GhostChase : GhostBehavior
             // Find the available direction that moves closest to pacman
             foreach (Vector2 availableDirection in node.availableDirections)
             {
-                Debug.Log("I am in chase");
+                //Debug.Log("I am in chase");
                 // If the distance in this direction is less than the current
                 // min distance then this direction becomes the new closest
                 Vector3 newPosition = transform.position + new Vector3(availableDirection.x, availableDirection.y);

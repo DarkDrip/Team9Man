@@ -78,6 +78,7 @@
     <Compile Include="Assets\Scripts\AnimatedSprite.cs" />
     <Compile Include="Assets\Scripts\sceneChange.cs" />
     <Compile Include="Assets\Scripts\Pellet.cs" />
+    <Compile Include="Assets\Scripts\scorePopup.cs" />
     <Compile Include="Assets\Scripts\GhostChase.cs" />
   </ItemGroup>
   <ItemGroup>

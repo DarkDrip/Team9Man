@@ -17,7 +17,7 @@ public class GhostScatter : GhostBehavior
         // Do nothing while the ghost is frightened
         if (node != null && enabled && !ghost.frightened.enabled)
         {
-            Debug.Log("I am in scatter");
+            //Debug.Log("I am in scatter");
             // Pick a random available direction
             int index = Random.Range(0, node.availableDirections.Count);
 

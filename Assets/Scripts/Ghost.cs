@@ -12,6 +12,7 @@ public class Ghost : MonoBehaviour
     public GhostBehavior initialBehavior;
     public Transform target;
     public int points = 200;
+    
 
     private void Awake()
     {
@@ -52,6 +53,8 @@ public class Ghost : MonoBehaviour
         // Keep the z-position the same since it determines draw depth
         position.z = transform.position.z;
         transform.position = position;
+        //movementCollection = position;
+        //Debug.Log("My position on death is: " + movementCollection);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -60,6 +63,8 @@ public class Ghost : MonoBehaviour
         {
             if (frightened.enabled)
             {
+                
+                //scorePopup.Instance.positionSet(this, movementCollection);
                 GameManager.Instance.GhostEaten(this);
             }
             else
