@@ -21,9 +21,6 @@ public class GameManager : MonoBehaviour
     public int lives { get; private set; } = 3;
 
     private int ghostMultiplier = 1;
-<<<<<<< Updated upstream
-    
-=======
     public AudioSource audioSource;
     public AudioSource intro;
     public AudioSource eat;
@@ -31,7 +28,6 @@ public class GameManager : MonoBehaviour
     public AudioSource powerPellet;
     public AudioSource ghostEat;
     public AudioSource idleWobble;
->>>>>>> Stashed changes
     /*
     public GameManager scoreTextInit(TextMeshProUGUI scoreText)
     {
@@ -64,11 +60,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-<<<<<<< Updated upstream
-        pacman.ResetState();
-=======
         
->>>>>>> Stashed changes
         NewGame();
         scoreText.text = "Score: ";
         livesText.text = "Lives: 3";
@@ -80,8 +72,6 @@ public class GameManager : MonoBehaviour
         {
             NewGame();
             
-<<<<<<< Updated upstream
-=======
         }
         //idleWobble.Play();
         if (powerPellet.isPlaying || intro.isPlaying)
@@ -92,7 +82,6 @@ public class GameManager : MonoBehaviour
         if (!powerPellet.isPlaying && !intro.isPlaying)
         {
             idleWobble.Play();
->>>>>>> Stashed changes
         }
     }
 
@@ -113,11 +102,7 @@ public class GameManager : MonoBehaviour
         {
             pellet.gameObject.SetActive(true);
         }
-<<<<<<< Updated upstream
-        roundCounter++;
-=======
         
->>>>>>> Stashed changes
         if(roundCounter >= 2)
         {
             SceneManager.LoadScene("YouWin");
@@ -165,14 +150,10 @@ public class GameManager : MonoBehaviour
     {
         
         pacman.DeathSequence();
-<<<<<<< Updated upstream
-
-=======
         if (!death.isPlaying)
         {
             death.Play();
         }
->>>>>>> Stashed changes
         SetLives(lives - 1);
 
         if (lives > 0)
@@ -188,13 +169,10 @@ public class GameManager : MonoBehaviour
 
     public void GhostEaten(Ghost ghost)
     {
-<<<<<<< Updated upstream
-=======
         if (!ghostEat.isPlaying)
         {
             ghostEat.Play();
         }
->>>>>>> Stashed changes
         int points = ghost.points * ghostMultiplier;
         SetScore(score + points);
         
@@ -203,14 +181,11 @@ public class GameManager : MonoBehaviour
 
     public void PelletEaten(Pellet pellet)
     {
-<<<<<<< Updated upstream
-=======
         if (!eat.isPlaying)
         {
             eat.Play();
         }
 
->>>>>>> Stashed changes
         pellet.gameObject.SetActive(false);
 
         SetScore(score + pellet.points);
@@ -226,11 +201,8 @@ public class GameManager : MonoBehaviour
 
     public void PowerPelletEaten(PowerPellet pellet)
     {
-<<<<<<< Updated upstream
-=======
         powerPellet.Play();
 
->>>>>>> Stashed changes
         for (int i = 0; i < ghosts.Length; i++)
         {
             ghosts[i].frightened.Enable(pellet.duration);

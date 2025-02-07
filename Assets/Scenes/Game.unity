@@ -479,7 +479,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 41.1
+  m_fontSize: 48
   m_fontSizeBase: 72
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -4290,8 +4290,6 @@ MonoBehaviour:
   - {fileID: 1004347201}
   pacman: {fileID: 1979002883}
   pellets: {fileID: 1820782480}
-<<<<<<< Updated upstream
-=======
   audioSource: {fileID: 1979002884}
   intro: {fileID: 1500496086}
   eat: {fileID: 1915390727}
@@ -4299,7 +4297,6 @@ MonoBehaviour:
   powerPellet: {fileID: 1428452841}
   ghostEat: {fileID: 2081173371}
   idleWobble: {fileID: 142996872}
->>>>>>> Stashed changes
 --- !u!4 &1857658465
 Transform:
   m_ObjectHideFlags: 0
@@ -7602,12 +7599,9 @@ SceneRoots:
   - {fileID: 1572022280}
   - {fileID: 2098338193}
   - {fileID: 2022324858}
-<<<<<<< Updated upstream
-=======
   - {fileID: 1874861512}
   - {fileID: 1915390728}
   - {fileID: 1428452842}
   - {fileID: 1500496087}
   - {fileID: 2081173372}
   - {fileID: 142996873}
->>>>>>> Stashed changes
